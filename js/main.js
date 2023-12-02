@@ -85,3 +85,8 @@
     
 })(jQuery);
 
+
+$(document).getElementById('keranjangButton').addEventListener('click', function() {
+    $('#keranjangModal').modal('show'); // Memunculkan modal saat tombol keranjang ditekan
+  });
+
