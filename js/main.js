@@ -86,7 +86,21 @@
 })(jQuery);
 
 
-$(document).getElementById('keranjangButton').addEventListener('click', function() {
-    $('#keranjangModal').modal('show'); // Memunculkan modal saat tombol keranjang ditekan
-  });
 
+
+// Fungsi untuk menambah dan mengurangi nilai pada input
+document.addEventListener('DOMContentLoaded', function() {
+    const btnPlus = document.querySelector('.btn-plus');
+    const btnMinus = document.querySelector('.btn-minus');
+    const inputQuantity = document.querySelector('.quantity input');
+
+    btnPlus.addEventListener('click', function() {
+      inputQuantity.value = parseInt(inputQuantity.value) + 1;
+    });
+
+    btnMinus.addEventListener('click', function() {
+      if (parseInt(inputQuantity.value) > 1) {
+        inputQuantity.value = parseInt(inputQuantity.value) - 1;
+      }
+    });
+  });

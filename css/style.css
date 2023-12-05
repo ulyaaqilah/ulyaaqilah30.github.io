@@ -104,24 +104,17 @@ h4, h5, h6, .h4, .h5, .h6 {
 
   .modal {
     position: fixed;
-    top: 50%;
     right: 0;
-    transform: translate(0, -50%);
-    z-index: 1050;
-    display: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    outline: 0
-}
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-.modal-dialog {
-    position: relative;
-    width: auto;
-    margin: .5rem;
-    pointer-events: none
-}
 
+ .modal-dialog {
+    max-width: 800px; /* Atur lebar maksimum sesuai kebutuhan */
+    margin: 30px auto; /* Untuk posisi tengah agar terlihat rapi */
+  }
+  
 .modal.fade .modal-dialog {
     transition: transform .3s ease-out;
     transform: translate(0,-50px)
